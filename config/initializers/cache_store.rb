@@ -1,0 +1,1 @@
+ActionController::Base.cache_store.logger = Rails.logger

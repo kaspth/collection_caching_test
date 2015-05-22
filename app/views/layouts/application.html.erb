@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CollectionCachingTest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<section class="caching-toggle">
+  <%= button_to caching_status, cache_path, method: :get %>
+</section>
+
+<section class="touch-notifications">
+  <%# You'll have to reload manually, like an animal! %>
+  <%= button_to 'Touch notifications', touch_notifications_path, method: :get, remote: true %>
+</section>
+
+<%= yield %>
+
+</body>
+</html>

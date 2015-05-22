@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All the great notifications!</h1>
+
+
+<span>Limit notifications to:
+<% [10, 20, 30, 50, 70, 100].each do |limit| %>
+  <%= link_to limit, notifications_path(limit: limit) %> |
+<% end %>
+</span>
+
+<%= render @notifications %>
+
+<%= link_to 'New Notification', new_notification_path %>
