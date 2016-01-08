@@ -2,6 +2,7 @@
   <article class="notification" id="<%= dom_id(notification) %>">
     <h1><%= notification.name %></h1> - <p><%= notification.created_at %></p>
     <p><%= notification.body %></p>
-    <%= sleep(0.03) # Simulate a template taking at least 30 milliseconds to render %>
+    <%# Simulate a template taking at least 30 milliseconds to render %>
+    <%= sleep(0.03) %>
   </article>
 <% end %>
