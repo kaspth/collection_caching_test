@@ -2,11 +2,16 @@ source 'https://rubygems.org'
 
 gem 'rails', path: "/Users/kasperhansen/Documents/code/rails"
 gem 'arel', github: "rails/arel"
+gem 'rack', github: 'rack/rack'
+
+gem 'sprockets', github: 'rails/sprockets', branch: 'master'
+gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: 'master'
+gem 'sass-rails', github: 'rails/sass-rails', branch: 'master'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -30,12 +35,12 @@ gem 'jbuilder', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Access an IRB console on exception pages or by using <%= console %> in views
+gem 'web-console', github: "rails/web-console", group: :development
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', github: "rails/web-console"
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
